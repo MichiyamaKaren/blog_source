@@ -14,6 +14,7 @@
       {%- if theme.math.mathjax.mhchem %}
         extensions: ['[mhchem]/mhchem.js'],
       {%- endif %}
+      extensions: ["mediawiki-texvc.js"],
       equationNumbers: {
         autoNumber: 'AMS'
       }
