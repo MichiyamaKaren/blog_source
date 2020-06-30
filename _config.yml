@@ -98,3 +98,11 @@ deploy:
   type: git
   repository: git@github.com:Li-mz/Li-mz.github.io
   branch: master
+
+# local search
+# configuration from http://yearito.cn/posts/hexo-advanced-settings.html
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
