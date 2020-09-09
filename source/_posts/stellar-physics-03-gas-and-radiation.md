@@ -81,7 +81,7 @@ $$
 和理想气体状态方程给出的压强一致。
 
 气体（平均）分子量为$\mu_I$，也可以写成
-$$ P_I = \frac{R}{\mu_I}\rho T $$
+$$ P_I = \frac{\mathcal{R}}{\mu_I}\rho T $$
 
 ## 电子压强
 
@@ -102,11 +102,11 @@ $$ \frac{1}{\mu_e} \approx \frac{1}{2}(X+1) $$
 
 ### 总压强
 由道尔顿分压定律，总压强
-$$ P_\mathrm{gas} = P_I+P_e = \left(\frac{1}{\mu_I} + \frac{1}{\mu_e}\right) R\rho T $$
+$$ P_\mathrm{gas} = P_I+P_e = \left(\frac{1}{\mu_I} + \frac{1}{\mu_e}\right) \mathcal{R}\rho T $$
 混合气体的平均分子量$\mu$定义为
 $$ \frac{1}{\mu} = \frac{1}{\mu_I} + \frac{1}{\mu_e} $$
 从而压强仍可写为
-$$ P_\mathrm{gas} = \frac{R}{\mu} \rho T $$
+$$ P_\mathrm{gas} = \frac{\mathcal{R}}{\mu} \rho T $$
 上面的结论依赖如下近似：
 - 忽略分子之间的电磁相互作用，看作理想气体
 - 假设离子都是完全电离的
@@ -205,7 +205,7 @@ $$ P=nkT $$
 粒子的总数密度为
 $$ n=n_0+n_e+n_+ = (x+1)(n_0+n_+) $$
 从而物态方程成为
-$$ P=(x+1)(n_0+n_+)Rm_HT = (x+1)R\rho T $$
+$$ P=(x+1)(n_0+n_+)\mathcal{R}m_HT = (x+1)\mathcal{R}\rho T $$
 在温度$T$下，离子电离和复合过程达到动态平衡，满足**Saha方程**：
 $$ \frac{n_+n_e}{n_0} = \frac{g}{h^3}(2\pi m_ekT)^{3/2} e^{-\chi/kT} $$
 其中$\chi$为电子的电离势能。
