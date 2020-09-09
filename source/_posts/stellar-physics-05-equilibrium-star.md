@@ -136,7 +136,7 @@ $$ \left(\frac{GM}{M_n}\right)^{n-1} \left(\frac{R}{R_n}\right)^{3-n} = \frac{[(
 即对确定的EoS，主序星的$M$和$R$有一一对应，称为**质量-半径关系**。
 
 由质量-半径关系式，可以看出$n=3$时（相对论性气体），$R/R_n$的项消失，$M=\mathrm{const}$不依赖$R$；$n=1$时，$M/M_n$的项消失，$R=\mathrm{const}$不依赖$M$。  
-$1<n<3$时，$R$与$M$负相关。
+$1 < n < 3$时，$R$与$M$负相关。
 
 由质量-半径关系可以给出$k$和$M,R$的关系，带入物态方程，得到中心压强：
 $$ P_c = \frac{(4\pi G)^{1/n}}{n+1}\left(\frac{GM}{M_n}\right)^{\frac{n-1}{n}}\left(\frac{R}{R_n}\right)^{\frac{3-n}{n}}\rho_c^{\frac{n+1}{n}} $$
@@ -175,18 +175,13 @@ $\mu_e$有两种情况：
 
 ## 爱丁顿（极限）光度
 
-由辐射转移方程
-$$ \frac{\mathrm{d} T}{\mathrm{d} r}=-\frac{3}{4 a c} \frac{\kappa \rho}{T^{3}} \frac{F}{4 \pi r^{2}} $$
-和辐射压
-$$ P_\mathrm{rad} = \frac{1}{3}aT^4 $$
-有
-$$ \frac{\mathrm{d}P_\mathrm{rad}}{\mathrm{d}r} = -\frac{\kappa \rho}{c} \frac{F}{4 \pi r^{2}} $$
+由辐射转移方程，
+$$ \frac{\mathrm{d}P_\mathrm{rad}}{\mathrm{d}r} = -\frac{\kappa \rho H}{c} = -\frac{\kappa \rho}{c} \frac{F}{4 \pi r^{2}} $$
 再根据流体静力学平衡
 $$ \frac{\mathrm{d} P}{\mathrm{d} r}=-\rho \frac{G m}{r^{2}} $$
 有
 $$ \frac{\mathrm{d}P_\mathrm{rad}}{\mathrm{d}P} = \frac{\kappa F}{4\pi cGm} $$
-主序星向外辐射，$F>0$，从而$\mathrm{d}P$和$\mathrm{d}P_\mathrm{rad}$符号相同。  
-由于从内向外$P$和$P_\mathrm{gas}$都减小，故$\mathrm{d}P_\mathrm{rad}<\mathrm{d}P$，从而有
+主序星辐射的能流向外，$F>0$，从而$\mathrm{d}P$和$\mathrm{d}P_\mathrm{rad}$符号相同。由于从内向外$P$和$P_\mathrm{gas}$都减小，故$\mathrm{d}P_\mathrm{rad}<\mathrm{d}P$，从而有
 $$ \kappa F < 4\pi cGm $$
 
 注意：在恒星外围壳层的对流区，氢氦充分电离，存在大量自由电子。若核区的磁流体不稳定性使核燃烧增强，$F$增大，导致更强的光致电离，使$n_e$增大，导致汤姆逊散射主导的$\kappa$增大。此时可能有$\kappa F>4\pi cGm$，需要引入对流机制转移多余的辐射的能量。
@@ -208,7 +203,7 @@ $$ \frac{\mathrm{d}F}{\mathrm{d}m} = q $$
 
 观测上，主序星有质光关系
 $$ \log L \propto n\log M $$
-结合$L<L_\mathrm{Edd}$，表明恒星质量存在上限。
+结合$L < L_\mathrm{Edd}$，表明恒星质量存在上限。
 
 ## 标准模型（爱丁顿模型）
 
@@ -222,12 +217,10 @@ $$ \frac{F(r)}{m(r)} = \eta \frac{L}{M} $$
 $$ \frac{\mathrm{d}P_\mathrm{rad}}{\mathrm{d}P} = \frac{\kappa F}{4\pi cGm} = \frac{\kappa \eta L}{4\pi cGM} = \frac{\kappa_s L}{4\pi cGM} $$
 其中$\kappa_s=\kappa\eta$。
 
-由于$q$对温度极端敏感，可以近似认为核区（点源）之外$q=0$。即对$r>0$，$F(r)\sim\mathrm{const}$。
+由于$q$对温度极端敏感，可以近似认为核区（点源）之外$q=0$。即对$r>0$，$F(r)\sim\mathrm{const}$。而向内$m(r)$减小，从而$\eta$增大，$\eta\ge 1$。  
+另一方面，$\kappa\propto \rho T^{-7/2}$（电子自由-自由散射的Kramers不透明度）。近似认为$\kappa$和$\eta$抵消，$\kappa_s\sim\mathrm{const}$。而在外表面$\kappa=1\cdot\kappa(R)=\kappa(R)$，从而$\kappa_s$就是恒星外表面的不透明度。
 
-向内$m(r)$减小，$\eta$增大，$\eta\ge 1$。  
-另一方面，$\kappa\propto \rho T^{-7/2}$。（电子自由-自由散射的Kramers不透明度）$\kappa$和$\eta$抵消，$\kappa_s\sim\mathrm{const}$。而在外表面$\kappa=1\cdot\kappa(R)=\kappa(R)$，即$\kappa_s$其实是恒星外表面的不透明度。
-
-$\kappa_s$是常数，从而：
+$\kappa_s$是常数，从而积分得到：
 $$ P_\mathrm{rad} = \frac{\kappa_s L}{4\pi cGM}P $$
 定义$\beta=P_{\mathrm{gas}}/P$，则
 $$ L = \frac{4\pi cGM}{\kappa_s}\frac{P_\mathrm{rad}}{P} = L_\mathrm{Edd}(1-\beta) $$
