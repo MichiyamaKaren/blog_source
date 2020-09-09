@@ -164,7 +164,7 @@ $$ \frac{\mathrm{d} T}{\mathrm{d} m}=-\frac{3}{4 a c} \frac{\kappa}{T^{3}} \frac
 
 ![](06-2-density-pressure.png)
 
-如图，若环境为S构型，绝热膨胀的$\rho_*<\rho_2$，从而质元上浮，对流区将不断发展，系统对流不稳定；若环境为S'构型，绝热膨胀的$\rho_*<\rho_2'$，质元下沉，系统对流稳定。
+如图，若环境为S构型，绝热膨胀的$\rho_{\*}<\rho_2$，从而质元上浮，对流区将不断发展，系统对流不稳定；若环境为S'构型，绝热膨胀的$ \rho_{\*}<\rho_2'$，质元下沉，系统对流稳定。
 
 对流稳定的条件也可以写为：
 $$ \left(\frac{\mathrm{d}P}{\mathrm{d}\rho}\right)_\mathrm{star} < \left(\frac{\mathrm{d}P}{\mathrm{d}\rho}\right)_\mathrm{adiabatic} $$
