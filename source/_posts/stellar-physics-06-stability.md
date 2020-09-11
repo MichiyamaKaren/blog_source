@@ -52,8 +52,8 @@ $$ \left(\frac{4}{3}-a\right) \frac{\mathrm{d}\rho_c}{\rho_c} = b\frac{\mathrm{d
 - 若核区为简并电子气，非相对论性的和相对论性的物态方程分别为
   $$ P_\mathrm{e,deg} = k_1\rho^{5/3}T^b $$
   $$ P_\mathrm{e,r,deg} = k_2\rho^{4/3}T^b $$
-  其中$0<b\ll 1$。  
-  有$a\ge4/3$，即密度减小时温度增大。此时核区等离子体不稳定性导致$L_\mathrm{nuc}>L$时，辐射压增大导致核区膨胀，$\rho_c$减小，而$T_c$将增大，使$q$进一步增大，核区将会持续膨胀，偏离平衡态，这一过程称为**runaway**。  
+  其中$0 < b \ll 1$。  
+  这两种物态方程都有$a \ge 4/3$，即密度减小时温度增大。当核区等离子体不稳定性使$L_\mathrm{nuc} > L$时，辐射压增大导致核区膨胀，$\rho_c$减小，而$T_c$将增大，使$q$进一步增大，核区将会持续膨胀，偏离平衡态，这一过程称为**runaway**。  
   若膨胀到一定程度使密度减小到解除简并态，核区重新成为稳定的理想气体，这一特例下runaway可以被避免。
 
 ### 薄壳不稳定性
@@ -75,7 +75,7 @@ $$ \left(4\frac{\ell}{r}-a\right) \frac{\mathrm{d}\rho_c}{\rho_c} = b\frac{\math
 
 白矮星表面上会残留没燃烧的氢，若经历热扰动，表面亮度会急剧增加，形成核闪耀，使本不可见的白矮星变得可见，观测上称为新星。
 
-最后需要说明的是，上面的讨论中没有考虑温度的变化也会导致光度$L$的变化。如果恒星壳层的膨胀导致温度升高，但同时光度也升高使$L_\mathrm{nuc}<L$，此时壳层也会失去能量而收缩，使其不至于runaway。不过事实上$L\sim T^4$，而相比之下$q$对温度要敏感的多，因此忽略$L$的变化也是合理的。
+最后需要说明的是，上面的讨论中没有考虑温度的变化也会导致光度$L$的变化。如果恒星壳层的膨胀导致温度升高，但同时光度也升高使$L_\mathrm{nuc} < L$，此时壳层也会失去能量而收缩，使其不至于runaway。不过事实上$L\sim T^4$，而相比之下$q$对温度要敏感的多，因此忽略$L$的变化也是合理的。
 
 ## 动力学稳定性
 
@@ -128,15 +128,15 @@ $$ \frac{x^2}{1-x^2} = \frac{g}{h^3}\frac{(2\pi m_ekT)^{3/2}(kT)^{5/2}}{P} e^{-\
 
 若气体受动力学扰动被压缩，分为两个过程：  
 第一步$(V,P,N)\rightarrow(V',P',N)$。令粒子数不变，体积减小导致压强增大，从而$x$减小（复合增强）。  
-第二步$(V',P',N)\rightarrow(V',P'',N')$，令体积不变，上一步复合增强导致$N'<N$，从而$P''<P'$。认为压缩过程满足绝热物态方程，$P=k_a\rho^{\gamma_a}$，复合过程不改变密度，则有$\gamma_a''<\gamma_a'$。有可能$\gamma_a''<4/3$，导致动力学不稳定。
+第二步$(V',P',N)\rightarrow(V',P'',N')$，令体积不变，上一步复合增强导致$N' < N$，从而$P'' < P'$。认为压缩过程满足绝热物态方程，$P=k_a\rho^{\gamma_a}$，复合过程不改变密度，则有$\gamma_a'' < \gamma_a'$。有可能$\gamma_a'' < 4/3$，导致动力学不稳定。
 
 3.6节中给出过：
 $$ \gamma_{\mathrm{a}}(x)=\frac{5+\left(\frac{5}{2}+\frac{\chi}{kT}\right)^{2} x(1-x)}{3+\left[\frac{3}{2}+\left(\frac{3}{2}+\frac{\chi}{k T}\right)^{2}\right] x(1-x)} $$
 
 - 对完全中性和完全电离气体，都有$\gamma_a=5/3$
 - 对部分电离气体：  
-  - 取$kT\approx \chi=13.6\mathrm{eV}$，当$18\%<x<82\%$时$\gamma_a<4/3$
-  - 取$kT\approx \chi/10$（低温），当$5\%<x<95\%$时$\gamma_a<4/3$
+  - 取$kT\approx \chi=13.6\mathrm{eV}$，当$18\% < x < 82\%$时$\gamma_a < 4/3$
+  - 取$kT\approx \chi/10$（低温），当$5\% < x < 95\%$时$\gamma_a < 4/3$
 
 讨论：
 - 在恒星内核，温度足够高，$\mathrm{H},\mathrm{He}$几乎完全电离，$x=1$。从而核区是动力学稳定的。
@@ -160,13 +160,13 @@ $$ \frac{\mathrm{d} T}{\mathrm{d} m}=-\frac{3}{4 a c} \frac{\kappa}{T^{3}} \frac
 ### 对流产生的条件
 ![](06-1-convection.png)
 
-如图，内壳层的高温气体密度较小从而上浮，经历绝热膨胀，密度增大。如果密度比当前壳层的密度大则下沉，否则将继续上浮，直到最后的$r_\mathrm{out}$处，绝热膨胀后的密度大于环境密度。$r_\mathrm{out}$即为对流区的外边界。一般$r_\mathrm{out}\ll R$。
+如图，假如温度、压强为$(\rho_1,P_1)$的气体团块上浮一小段距离到密度、压强为$(\rho_2,P_2)$的壳层处，由于$P_1 > P_2$，这一团块将会膨胀直到和环境压强平衡，即$P_{\*}=P_2$。考虑恒星中的动力学时标远小于热力学时标，这一膨胀过程可以近似看为绝热的。绝热膨胀导致密度减小，如果密度比当前壳层的密度$\rho_2$大则下沉，此时是**对流稳定**的；否则气体团块将继续上浮，直到上升到$r_\mathrm{out}$处，绝热膨胀后的密度大于环境密度。这种情况下是**对流不稳定**的，$r_\mathrm{out}$即为对流区的外边界。一般$r_\mathrm{out} \ll R$。
 
 ![](06-2-density-pressure.png)
 
 如图，若环境为S构型，绝热膨胀的$\rho_{\*}<\rho_2$，从而质元上浮，对流区将不断发展，系统对流不稳定；若环境为S'构型，绝热膨胀的$ \rho_{\*}<\rho_2'$，质元下沉，系统对流稳定。
 
-对流稳定的条件也可以写为：
+对流稳定的条件可以写为：
 $$ \left(\frac{\mathrm{d}P}{\mathrm{d}\rho}\right)_\mathrm{star} < \left(\frac{\mathrm{d}P}{\mathrm{d}\rho}\right)_\mathrm{adiabatic} $$
 由多方过程的物态方程
 $$ P = k\rho^{\gamma} $$
@@ -186,9 +186,9 @@ $$
 \end{aligned}
 $$
 
-从而对流稳定性条件可以写为
+从而对流稳定性条件成为
 $$ \frac{P}{T}\left(\frac{d T}{d P}\right)_{\mathrm{star}}<\frac{\gamma_{\mathrm{a}}-1}{\gamma_{\mathrm{a}}} $$
-同除$\mathrm{d}r$即得到对流稳定性的判据
+或者
 $$ \left|\frac{d T}{d r}\right|_{\mathrm{star}}<\left(\frac{\gamma_{\mathrm{a}}-1}{\gamma_{\mathrm{a}}}\right) \frac{T}{P}\left|\frac{d P}{d r}\right|_{\mathrm{star}} $$
 
 ## 对流不稳定性的例子
