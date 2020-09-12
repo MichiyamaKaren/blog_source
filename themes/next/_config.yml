@@ -625,13 +625,13 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
-  enable: false # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version
-  appid: # Your leancloud application appid
-  appkey: # Your leancloud application appkey
+  enable: true # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version
+  appid: GMC8JlmcdEXQuVhez2nFHNag-gzGzoHsz # Your leancloud application appid
+  appkey: mICrom67f9LiUrnuDD9DOh7I # Your leancloud application appkey
   notify: false # Mail notifier. See: https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # Comment box placeholder
-  avatar: mm # Gravatar style
+  avatar: identicon # Gravatar style
   guest_info: nick,mail,link # Custom comment header
   pageSize: 10 # Pagination size
   language: # Language, available values: en, zh-cn
@@ -649,7 +649,7 @@ livere_uid: # <your_uid>
 # Demo: https://gitalk.github.io
 # For more information: https://github.com/gitalk/gitalk
 gitalk:
-  enable: true
+  enable: false
   github_id: Li-mz # GitHub repo owner
   repo: Li-mz.github.io # Repository name to store issues
   client_id: a689a162e6bf693f09ef # GitHub Application Client ID
