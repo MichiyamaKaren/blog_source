@@ -654,8 +654,8 @@ gitalk:
   enable: false
   github_id: Li-mz # GitHub repo owner
   repo: Li-mz.github.io # Repository name to store issues
-  client_id: a689a162e6bf693f09ef # GitHub Application Client ID
-  client_secret: 6aeddd5e4a137ac862f95f4b014c96912779357f # GitHub Application Client Secret
+  client_id: # GitHub Application Client ID
+  client_secret: # GitHub Application Client Secret
   admin_user: Li-mz # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
   distraction_free_mode: true # Facebook-like distraction free mode
   # Gitalk's display language depends on user's browser or system environment
