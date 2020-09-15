@@ -106,3 +106,14 @@ search:
   field: post
   format: html
   limit: 10000
+
+douban:
+  user: 223108191
+  builtin: false
+  book:
+    title: '我读过的书'
+    quote: ''
+  movie:
+    title: '我看过的电影/动画'
+    quote: ''
+  timeout: 10000

@@ -130,6 +130,8 @@ menu:
   categories: /categories/ || th
   archives: /archives/ || archive
   guestbook: /guestbook || comments
+  books: /books || book
+  movies: /movies || film
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -195,7 +197,7 @@ social:
   #YouTube: https://youtube.com/yourname || youtube
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
-  Bilibili: https://space.bilibili.com/13024288 || bilibili
+  Bilibili: https://space.bilibili.com/13024288 || 
 
 social_icons:
   enable: true
