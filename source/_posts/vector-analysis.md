@@ -17,8 +17,6 @@ tags:
 
 这里不深究矢量的定义，我们只考虑三维欧式空间$\mathbb{R}^3$中的矢量，它们有三个分量，并且分量在任意的坐标变换下与$\mathbf r=(x,y,z)$具有相同的变换形式。形象地说，“**矢量应该像矢量那样变换**”。
 
-关于微分几何中介绍的矢量和张量的定义参见[这篇文章](https://li-mz.github.io/404)。
-
 ## 1.2 爱因斯坦求和约定
 
 我们经常会遇到形式相同的几项求和的式子，比如：
@@ -100,7 +98,7 @@ $$
 2. 使用爱因斯坦求和约定展开：
 $$
 \begin{align*}
-\nabla\times(\mathbf A\times \mathbf B) &= \epsilon_{ijk}\frac{\partial}{\partial x^j}(\mathbf A\times\mathbf B)\_k\mathbf e_i
+\nabla\times(\mathbf A\times \mathbf B) &= \epsilon_{ijk}\frac{\partial}{\partial x^j}(\mathbf A\times\mathbf B)_k\mathbf e_i
 \\ &=\epsilon_{ijk}\frac{\partial}{\partial x^j}(\epsilon_{klm}A_lB_m)\mathbf e_i  = \epsilon_{kij}\frac{\partial}{\partial x^j}(\epsilon_{klm}A_lB_m)\mathbf e_i 
 \\&=(\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl})\frac{\partial}{\partial x^j}(A_lB_m)\mathbf e_i
 \\ &=\frac{\partial}{\partial x^j}(A_iB_j)\mathbf e_i-\frac{\partial}{\partial x^j}(A_jB_i)\mathbf e_i
@@ -120,10 +118,8 @@ $$
 ## 2.1 矢量的对偶集合（reciprocal sets）
 
 称矢量集合$\{\mathbf A,\mathbf B,\mathbf C\}$和$\{\mathbf a,\mathbf b,\mathbf c\}$为对偶集合，若：
-$$
-\mathbf A\cdot\mathbf a=\mathbf B\cdot\mathbf b=\mathbf C\cdot\mathbf c=1
-\\ \mathbf A\cdot\mathbf b=\mathbf A\cdot\mathbf c=\cdots=0
-$$
+$$ \mathbf A\cdot\mathbf a=\mathbf B\cdot\mathbf b=\mathbf C\cdot\mathbf c=1 $$
+$$ \mathbf A\cdot\mathbf b=\mathbf A\cdot\mathbf c=\cdots=0 $$
 。即，一个集合的每个元素都和另一个集合的一个元素的内积为1，并和另外两个元素正交。这两个集合中的元素都是线性无关的（否则，存在$\lambda,\mu,\gamma\neq0$，使$\lambda\mathbf A+\mu\mathbf B+\gamma\mathbf C=0$，从而$(\lambda\mathbf A+\mu\mathbf B+\gamma\mathbf C)\cdot\mathbf a=\lambda=0$，矛盾）。从而，对任意的矢量$\mathbf W$，都可以表示为这两个集合中的元素的线性组合：
 $$\mathbf W=(\mathbf W\cdot\mathbf a)\mathbf A+(\mathbf W\cdot\mathbf b)\mathbf B+(\mathbf W\cdot\mathbf c)\mathbf C$$
 或：
@@ -138,11 +134,9 @@ $$
 ## 2.2 曲线坐标基
 
 考虑坐标变换$\mathbf R(u^1,u^2,u^3)$：
-$$
-x=x(u^1,u^2,u^3)
-\\y=y(u^1,u^2,u^3)
-\\z=z(u^1,u^2,u^3)
-$$
+$$ x=x(u^1,u^2,u^3) $$
+$$ y=y(u^1,u^2,u^3) $$
+$$ z=z(u^1,u^2,u^3) $$
 要求这个变换是独立的，即可以用$u^1,u^2,u^3$表示$x,y,z$（严谨地说，Jacobi行列式非零）。
 
 令$(u^1,u^2,u^3)$中一个坐标为定值，可以确定一个曲面，称为**坐标曲面**。令两个坐标为定值，则确定了一条曲线，称为**坐标曲线**。显然任意一条坐标曲线都可以看作两个坐标面的交线。
@@ -152,30 +146,25 @@ $$
 \mathbf e_1=\frac{\partial \mathbf R}{\partial u^1},\mathbf e_2=\frac{\partial \mathbf R}{\partial u^2},\mathbf e_3=\frac{\partial \mathbf R}{\partial u^3} \tag{2.2.1}
 $$
 根据Jacobi行列式非零，$\{\mathbf e_1,\mathbf e_2,\mathbf e_3\}$线性无关。这里与直角坐标系的区别在于，坐标基本身是位置的函数，不一定是常量。 
-另一方面，过同一点的三个坐标曲面的法线方向也可以定义另一组基。曲面某一点的法线方向应该与曲面上过这一点的曲线的切线方向垂直。注意到$\mathbf du^i=\nabla u^i\cdot\mathbf{dR}$，从而$\mathbf{dR}=\frac{\partial \mathbf R}{\partial u^j}\mathbf du^j = \mathbf e_j\mathbf du^j$，带回，$\mathbf du^i=\nabla u^i\cdot\mathbf e_j\mathbf du^j$，由于$u^1,u^2,u^3$互相独立，有：
+
+另一方面，过同一点的三个坐标曲面的法线方向也可以定义另一组基。曲面某一点的法线方向应该与曲面上过这一点的曲线的切线方向垂直。注意到$\mathrm{d}u^i=\nabla u^i\cdot\mathrm{d}\mathbf{R}$，从而$\mathrm{d}\mathbf{R}=\frac{\partial \mathbf R}{\partial u^j}\mathbf du^j = \mathbf e_j\mathrm{d}u^j$，带回，$\mathrm{d}u^i=\nabla u^i\cdot\mathbf e_j\mathrm{d}u^j$，由于$u^1,u^2,u^3$互相独立，有：
 $$\nabla u^i\cdot\mathbf e_j=\delta_j^i$$
 这满足我们对曲线法线的期望，定义另外一组基如下：
 $$\mathbf e^1=\nabla u^1,\mathbf e^2=\nabla u^2,\mathbf e^3=\nabla u^3 \tag{2.2.2}$$
 另外由推导的过程我们知道，$\{\mathbf e_1,\mathbf e_2,\mathbf e_3\}$和$\{\mathbf e^1,\mathbf e^2,\mathbf e^3\}$是一对对偶矢量集合，分别称作**基**和**对偶基**。
 
 >作为例子，让我们考虑球坐标：
-$$
-x=r\sin\theta\cos\phi
-\\ y=r\sin\theta\sin\phi
-\\ z=r\cos\theta
-$$
+$$ x=r\sin\theta\cos\phi $$
+$$ y=r\sin\theta\sin\phi $$
+$$ z=r\cos\theta $$
 根据2.2.1，坐标基为：
-$$
-\mathbf{e_r}=\frac{\partial \mathbf R}{\partial r}=\sin\theta\cos\phi \mathbf{e_x}+\sin\theta\sin\phi \mathbf{e_y}+\cos\theta\mathbf{e_z}
-\\ \mathbf{e_{\theta}}=\frac{\partial \mathbf R}{\partial \theta}=r\cos\theta\cos\phi \mathbf{e_x}+r\cos\theta\sin\phi \mathbf{e_y}-r\sin\theta\mathbf{e_z}
-\\ \mathbf{e_{\phi}}=\frac{\partial \mathbf R}{\partial \theta}=-r\sin\theta\sin\phi \mathbf{e_x}+r\sin\theta\cos\phi \mathbf{e_y}
-$$
+$$ \mathbf{e_r}=\frac{\partial \mathbf R}{\partial r}=\sin\theta\cos\phi \mathbf{e_x}+\sin\theta\sin\phi \mathbf{e_y}+\cos\theta\mathbf{e_z} $$
+$$ \mathbf{e_{\theta}}=\frac{\partial \mathbf R}{\partial \theta}=r\cos\theta\cos\phi \mathbf{e_x}+r\cos\theta\sin\phi \mathbf{e_y}-r\sin\theta\mathbf{e_z} $$
+$$ \mathbf{e_{\phi}}=\frac{\partial \mathbf R}{\partial \theta}=-r\sin\theta\sin\phi \mathbf{e_x}+r\sin\theta\cos\phi \mathbf{e_y} $$
 一般会对其进行归一化，这使它们成为坐标曲线的单位切向量，归一化的结果为：
-$$
-\mathbf{e_r}=\sin\theta\cos\phi \mathbf{e_x}+\sin\theta\sin\phi \mathbf{e_y}+\cos\theta\mathbf{e_z}
-\\ \mathbf{e_{\theta}}=\cos\theta\cos\phi \mathbf{e_x}+\cos\theta\sin\phi \mathbf{e_y}-\sin\theta\mathbf{e_z}
-\\ \mathbf{e_{\phi}}=-\sin\theta\sin\phi \mathbf{e_x}+\sin\theta\cos\phi \mathbf{e_y}
-$$
+$$ \mathbf{e_r}=\sin\theta\cos\phi \mathbf{e_x}+\sin\theta\sin\phi \mathbf{e_y}+\cos\theta\mathbf{e_z} $$
+$$ \mathbf{e_{\theta}}=\cos\theta\cos\phi \mathbf{e_x}+\cos\theta\sin\phi \mathbf{e_y}-\sin\theta\mathbf{e_z} $$
+$$ \mathbf{e_{\phi}}=-\sin\theta\sin\phi \mathbf{e_x}+\sin\theta\cos\phi \mathbf{e_y} $$
 
 ## 2.3 矢量的协变和逆变分量
 
@@ -184,19 +173,18 @@ $$
 \mathbf D = D^i\mathbf e_i = D_i\mathbf e^i
 $$
 ,其中：
-$$
-D^i=\mathbf D\cdot\mathbf e^i
-\\D_i=\mathbf D\cdot\mathbf e_i
-$$
+$$ D^i=\mathbf D\cdot\mathbf e^i $$
+$$ D_i=\mathbf D\cdot\mathbf e_i $$
 用上、下指标表示的分量$D^i,D_i$分别称作**逆变分量**、**协变分量**。
 
-下面的论述不完全准确地讨论了协变和逆变分量的含义。考虑不同于$\{\mathbf e_1,\mathbf e_2,\mathbf e_3\}$的另一组线性无关的基$\{\mathbf e_1',\mathbf e_2',\mathbf e_3'\}$，相应的对偶集合$\{\mathbf e^1{'}  ,\mathbf e^2{'},\mathbf e^3{'}\}$。两组基之间的坐标变换为$\mathbf e_i'=T_i^{\cdot\alpha}\mathbf e_{\alpha},\mathbf e^j{'}=T_{\cdot\beta}^j\mathbf e^{\beta}$。由对偶集合的定义，应有：
+下面的论述不完全准确地讨论了协变和逆变分量的含义。考虑不同于$\{\mathbf e_1,\mathbf e_2,\mathbf e_3\}$的另一组线性无关的基$\{\mathbf e_1',\mathbf e_2',\mathbf e_3'\}$，相应的对偶集合$\{\mathbf e^1{}' ,\mathbf e^2{}',\mathbf e^3{}'\}$。两组基之间的坐标变换为$\mathbf e_i'=T_i^{\alpha}\mathbf e_{\alpha},\mathbf e^j{}'=T_{\beta}^j\mathbf e^{\beta}$。由对偶集合的定义，应有：
 $$
-\begin{align*}\mathbf e_i'\cdot\mathbf e^j{'} &=  T_i^{\cdot\alpha}\mathbf e_{\alpha} \cdot T_{\cdot\beta}^j\mathbf e^{\beta} = T_i^{\cdot\alpha}T_{\cdot\beta}^j \delta_{\alpha}^{\beta} = T_i^{\cdot\alpha}T_{\cdot\alpha}^j
-\\&= \delta_i^j 
-\end{align*}
+\begin{aligned}
+    \mathbf e_i'\cdot\mathbf e^j{}' &=  T_i^{\alpha}\mathbf e_{\alpha} \cdot T_{\beta}^j\mathbf e^{\beta} = T_i^{\alpha}T_{\beta}^j \delta_{\alpha}^{\beta} = T_i^{\alpha}T_{\alpha}^j
+    \\&= \delta_i^j
+\end{aligned}
 $$
-说明基和对偶基的坐标变换矩阵$T_i^{\cdot\alpha}$和$T_{\cdot\beta}^j$的分量形式构成的矩阵互逆。矢量$\mathbf D$的协变分量$D_i=\mathbf D\cdot\mathbf e_i$，和基的变换方式相同，故称作协变；同理，逆变分量和对偶基的变换方式相同，其变换矩阵为基的逆矩阵，故称为逆变。（事实上$T_i^{\cdot\alpha}$和$T_{\cdot\beta}^j$不是两个矩阵，而是同一个张量在不同的基下的分量形式）
+说明基和对偶基的坐标变换矩阵$T_i^{\alpha}$和$T_{\beta}^j$的分量形式构成的矩阵互逆。矢量$\mathbf D$的协变分量$D_i=\mathbf D\cdot\mathbf e_i$，和基的变换方式相同，故称作协变；同理，逆变分量和对偶基的变换方式相同，其变换矩阵为基的逆矩阵，故称为逆变。（事实上$T_i^{\alpha}$和$T_{\beta}^j$不是两个矩阵，而是同一个张量在不同的基下的分量形式）
 
 需要注意矢量的协变表示和逆变表示与协变矢量和逆变矢量是不同的概念，在$\mathbb R^3$中不对后者进行区分。
 
@@ -204,10 +192,10 @@ $$
 
 对任意矢量$\mathbf D$，有：
 $$
-\begin{align*}
-D_i &= \mathbf D\cdot\mathbf e_i = (D^j\mathbf e_j)\cdot\mathbf e_i
-\\&=D^j(\mathbf e_i\cdot\mathbf e_j) = g_{ij}D^j
-\end{align*}
+\begin{aligned}
+    D_i &= \mathbf D\cdot\mathbf e_i = (D^j\mathbf e_j)\cdot\mathbf e_i
+    \\&=D^j(\mathbf e_i\cdot\mathbf e_j) = g_{ij}D^j
+\end{aligned}
 $$
 由此，根据分量：
 $$
@@ -224,31 +212,32 @@ $$
 
 另外，借助度规，可以表示两个矢量的点乘和叉乘运算的同一类分量形式：
 $$
-\begin{align*}
-\mathbf A\cdot\mathbf B &= (A^i\mathbf e_i)\cdot(B^j\mathbf e_j)=g_{ij}A^iB^j
-\\&= (A_i\mathbf e^i)\cdot(B_j\mathbf e^j)=g^{ij}A_iB_j
-\end{align*}
+\begin{aligned}
+    \mathbf A\cdot\mathbf B &= (A^i\mathbf e_i)\cdot(B^j\mathbf e_j)=g_{ij}A^iB^j
+    \\&= (A_i\mathbf e^i)\cdot(B_j\mathbf e^j)=g^{ij}A_iB_j
+\end{aligned}
 $$
-特别地，$\mathbf{dR}\cdot\mathbf{dR} = g_{ij}(\mathbf{dR})^i(\mathbf{dR})^j = g_{ij}\mathbf{d}u^i\mathbf{d}u^j$。（其中$(\mathbf{dR})^i = \nabla u^i\cdot\mathbf{dR} = \mathbf du^i$），这告诉我们度规也蕴含了曲线坐标系中的线元长度。
+特别地，$\mathrm{d}\mathbf{R}\cdot\mathbf{dR} = g_{ij}(\mathrm{d}\mathbf{R})^i(\mathrm{d}\mathbf{R})^j = g_{ij}\mathbf{d}u^i\mathbf{d}u^j$。（其中$(\mathrm{d}\mathbf{R})^i = \nabla u^i\cdot\mathrm{d}\mathbf{R} = \mathbf du^i$），这告诉我们度规也蕴含了曲线坐标系中的线元长度。
 
 对矢量的叉乘：
 $$
-\begin{align*}
-\mathbf A\times\mathbf B &= A^iB^j(\mathbf e_i\times\mathbf e_j)
+\begin{aligned}
+    \mathbf A\times\mathbf B &= A^iB^j(\mathbf e_i\times\mathbf e_j)
 \\&=A^iB^j\epsilon_{kij}\mathbf e^k(\mathbf e_k\cdot(\mathbf e_i\times\mathbf e_j))
-\\&=J\epsilon_{kij}A^iB^j\mathbf e^k
-\end{align*}
+\\&=\epsilon_{kij}A^iB^j\mathbf e^k
+\end{aligned}
 $$
 上面的推导用到了(2.1.1)式，当且仅当$(k,i,j)$是$(1,2,3)$的偶置换时有$\mathbf e^k = \frac{\mathbf e_i\times\mathbf e_j}{\mathbf e_k\cdot(\mathbf e_i\times\mathbf e_j)}$，且由(1.3.2)式，对所有偶置换，分母都相等。式中
 $$
-\begin{align*}
-J &= \mathbf e_1\cdot(\mathbf e_2\times\mathbf e_3) = \frac{\partial \mathbf R}{\partial u^1}\cdot(\frac{\partial \mathbf R}{\partial u^2}\times\frac{\partial \mathbf R}{\partial u^3})
-\\&=\begin{vmatrix}
-\frac{\partial x}{\partial u^1} & \frac{\partial y}{\partial u^1} & \frac{\partial z}{\partial u^1} 
-\\ \frac{\partial x}{\partial u^2} & \frac{\partial y}{\partial u^2} & \frac{\partial z}{\partial u^2}
-\\ \frac{\partial x}{\partial u^3} & \frac{\partial y}{\partial u^3} & \frac{\partial z}{\partial u^3}
-\end{vmatrix}
-\end{align*}
+\begin{aligned}
+    J &= \mathbf e_1\cdot(\mathbf e_2\times\mathbf e_3) = \frac{\partial \mathbf R}{\partial u^1}\cdot(\frac{\partial \mathbf R}{\partial u^2}\times\frac{\partial \mathbf R}{\partial u^3})
+    \\&=
+    \begin{vmatrix}
+        \frac{\partial x}{\partial u^1} & \frac{\partial y}{\partial u^1} & \frac{\partial z}{\partial u^1} 
+        \\ \frac{\partial x}{\partial u^2} & \frac{\partial y}{\partial u^2} & \frac{\partial z}{\partial u^2}
+        \\ \frac{\partial x}{\partial u^3} & \frac{\partial y}{\partial u^3} & \frac{\partial z}{\partial u^3}
+    \end{vmatrix}
+\end{aligned}
 $$
 为Jacobi行列式。把度规的分量$g_{ij}$写成矩阵，发现其元素$g_{ij}=\sum_{q=1}^{3}\frac{\partial \mathbf R^q}{\partial u^i}\cdot\frac{\partial \mathbf R^q}{\partial u^j}$，可以写成上面的Jacobi矩阵与其转置的积，那么我们有：
-$$g=det(g_{ij})=J^2$$
+$$ g=det(g_{ij})=J^2 $$
