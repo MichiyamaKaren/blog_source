@@ -60,9 +60,7 @@ $$\mathscr{T}(\mathrm{d}\mathbf{x'})^\dagger=\mathscr{T}(-\mathrm{d}\mathbf{x'})
 当然，根据定义，无穷小平移算符还应满足以下性质：
 - $\mathscr{T}(\mathrm{d}\mathbf{x'})\mathscr{T}(\mathrm{d}\mathbf{x''})=\mathscr{T}(\mathrm{d}\mathbf{x'}+\mathrm{d}\mathbf{x''})$
 - $\mathscr{T}(-\mathrm{d}\mathbf{x'})=\mathscr{T}^{-1}(\mathrm{d}\mathbf{x'})$
-- 根据上一条性质和$\mathscr{T}(\mathrm{d}\mathbf{x'})$的厄米共轭的表达式，它也应该是厄米算符
-
-*（书上这几个性质都是假设的，但是在不考虑简并的情况下真的有特意假设一下的必要吗……）*
+- 根据上一条性质和$\mathscr{T}(\mathrm{d}\mathbf{x'})$的厄米共轭的表达式，它应该是幺正算符
 
 第一个性质要求$\mathscr{T}(\mathrm{d}\mathbf{x'})$是指数函数，即：
 $$\mathscr{T}(\mathrm{d}\mathbf{x'})=\exp \left(\mathbf{B}\cdot \mathrm{d}\mathbf{x'}\right) $$
