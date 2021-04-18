@@ -2,7 +2,6 @@
 title:       恒星的演化
 description: 恒星物理笔记（七）
 date:        2020-09-08 22:59:32
-author:      y
 mathjax:     true
 categories:
     - 笔记

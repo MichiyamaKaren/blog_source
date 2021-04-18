@@ -2,7 +2,6 @@
 title:       量子态的时间演化
 description: Sakurai读书笔记（三）
 date:        2020-10-08 14:41:46
-author:      y
 mathjax:     true
 categories:
     - 笔记

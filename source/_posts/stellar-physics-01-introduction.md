@@ -2,7 +2,6 @@
 title:       绪论——恒星物理
 description: 恒星物理笔记（一）
 date:        2020-09-08 13:00:00
-author:      y
 mathjax:     true
 categories:
     - 笔记

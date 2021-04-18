@@ -2,7 +2,6 @@
 title:      n维正态分布的似然估计
 description: 
 date:       2019-04-08
-author:     y
 mathjax:    true
 categories:
 

@@ -2,7 +2,6 @@
 title: 为什么我们不该相信阴谋论
 description: 主体内容是贝叶斯定理和奥卡姆剃刀的缝合怪科普
 date: 2020-02-08 11:38:08
-author: y
 mathjax: true
 categories:
     - 科普

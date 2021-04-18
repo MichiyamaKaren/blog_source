@@ -2,7 +2,6 @@
 title:      位置算符、动量算符和波函数
 description: Sakurai读书笔记（二）
 date:       2019-11-28
-author:     y
 mathjax:    true
 categories:
     - 笔记

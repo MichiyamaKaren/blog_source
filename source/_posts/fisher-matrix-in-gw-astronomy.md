@@ -2,7 +2,6 @@
 title:       Fisher矩阵在引力波天文学中的应用
 description: 解释利用Fisher矩阵估计对引力波参数的限制能力的数学原理，并推导由Fisher矩阵得出定位天区面积的公式
 date:        2021-04-15 17:22:46
-author:      y
 mathjax:     true
 categories:
     - 引力波

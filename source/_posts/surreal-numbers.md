@@ -2,7 +2,6 @@
 title: 关于超现实数
 description: 《研究之美》读书笔记
 date: 2020-05-30
-author: y
 mathjax: true
 categories:
     - 数学

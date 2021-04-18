@@ -2,7 +2,6 @@
 title:      态矢和表象
 description: Sakurai读书笔记（一）
 date:       2019-11-17
-author:     y
 mathjax:    true
 categories:
     - 笔记

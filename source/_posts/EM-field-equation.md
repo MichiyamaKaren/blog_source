@@ -2,7 +2,6 @@
 title:      电磁场方程
 description: 电动力学笔记（四）
 date:       2019-05-28
-author:     y
 mathjax:    true
 categories:
     - 笔记

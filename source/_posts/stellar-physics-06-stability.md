@@ -2,7 +2,6 @@
 title:       恒星的稳定性
 description: 恒星物理笔记（六）
 date:        2020-09-08 21:18:50
-author:      y
 mathjax:     true
 categories:
     - 笔记

@@ -2,7 +2,6 @@
 title:      矢量和分析和曲线坐标系
 description: 电动力学笔记（一）
 date:       2019-03-14
-author:     y
 mathjax:    true
 categories:
     - 笔记

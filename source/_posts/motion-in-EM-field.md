@@ -2,7 +2,6 @@
 title:      电磁场中运动的粒子
 description: 电动力学笔记（三）
 date:       2019-03-30
-author:     y
 mathjax:    true
 categories:
     - 笔记

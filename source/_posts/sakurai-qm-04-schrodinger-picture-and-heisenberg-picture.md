@@ -2,7 +2,6 @@
 title:       薛定谔绘景和海森堡绘景
 description: Sakurai读书笔记（四）
 date:        2020-10-17 22:04:53
-author:      y
 mathjax:     true
 categories:
     - 笔记

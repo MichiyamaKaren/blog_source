@@ -2,7 +2,6 @@
 title:      在Docker上部署Jupyter Notebook
 description: 
 date:       2019-10-22
-author:     y
 mathjax:    false
 categories:
     - 技术

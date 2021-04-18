@@ -2,7 +2,6 @@
 title:       恒星内部的核过程
 description: 恒星物理笔记（四）
 date:        2020-09-08 16:00:07
-author:      y
 mathjax:     true
 categories:
     - 笔记

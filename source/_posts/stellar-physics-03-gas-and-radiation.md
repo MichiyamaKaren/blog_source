@@ -2,7 +2,6 @@
 title:       恒星内部气体和辐射基本物理
 description: 恒星物理笔记（三）
 date:        2020-09-08 15:34:00
-author:      y
 mathjax:     true
 categories:
     - 笔记

@@ -2,7 +2,6 @@
 title:       恒星演化方程
 description: 恒星物理笔记（二）
 date:        2020-09-08 14:00:00
-author:      y
 mathjax:     true
 categories:
     - 笔记

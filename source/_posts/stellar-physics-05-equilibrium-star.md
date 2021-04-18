@@ -2,7 +2,6 @@
 title:       恒星的内部结构——简单模型
 description: 恒星物理笔记（五）
 date:        2020-09-08 16:38:12
-author:      y
 mathjax:     true
 categories:
     - 笔记

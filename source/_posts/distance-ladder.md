@@ -2,7 +2,6 @@
 title:      宇宙距离阶梯
 description: 简述天文学家如何准确“量天”
 date:       2019-05-06
-author:     y
 mathjax:    true
 categories:
     - 科普

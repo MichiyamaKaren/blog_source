@@ -2,7 +2,6 @@
 title:      基于NoneBot的NG词语游戏插件
 description: 
 date:       2019-07-07
-author:     y
 mathjax:    false
 categories:
     - 技术
