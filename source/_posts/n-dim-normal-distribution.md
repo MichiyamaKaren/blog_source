@@ -11,7 +11,7 @@ tags:
 ---
 
 $n$维向量$\mathbf x=(x_1,\cdots,x_n)$满足正态分布，概率密度函数为：
-$$p(\mathbf x) = \frac{1}{(2\pi)^{n/2}|\mathbf C|^{1/2}} \exp\left( -\frac 1 2 \sum_{i,j=1}^n (x_i-m_i)C^{-1}_{ij}(x_j-m_j) \right)$$
+$$p(\mathbf x) = \frac{1}{(2\pi)^{n/2}|\mathbf C|^{1/2}} \exp\left( -\frac 1 2 \sum_{i,j=1}^n (x_i-m_i)C_{ij}^{-1}(x_j-m_j) \right)$$
 均值$\mathbf m$和协方差矩阵$\mathbf C$的定义为：
 $$
 \mathbf m = E(\mathbf x)

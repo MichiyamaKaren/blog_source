@@ -62,9 +62,9 @@ $$
 $$
 \epsilon_{ijk}=\left\{
 \begin{matrix}
-1 & (i,j,k)\mbox{是}(1,2,3)\mbox{的偶置换}
-\\-1 & (i,j,k)\mbox{是}(1,2,3)\mbox{的奇置换}
-\\0 & \mbox{其他（即}(i,j,k)\mbox{中存在两者相等）}
+1 & (i,j,k)是(1,2,3)的偶置换
+\\-1 & (i,j,k)是(1,2,3)的奇置换
+\\0 & 其他（即(i,j,k)中存在两者相等）
 \end{matrix}
 \right.
 $$
@@ -76,12 +76,8 @@ $$
 ## 1.3 矢量分析
 
 两个常用的公式是：
-$$
-\begin{eqnarray*}
-\mathbf A \times(\mathbf B \times \mathbf C)=(\mathbf A\cdot \mathbf C)\mathbf B-(\mathbf A\cdot\mathbf B)\mathbf C \tag{1.3.1}
-\\ \mathbf A\cdot(\mathbf B\times\mathbf C)=\mathbf B\cdot(\mathbf C\times\mathbf A)=\mathbf C\cdot(\mathbf A\times\mathbf B) \tag{1.3.2}
-\end{eqnarray*}
-$$
+$$ \mathbf A \times(\mathbf B \times \mathbf C)=(\mathbf A\cdot \mathbf C)\mathbf B-(\mathbf A\cdot\mathbf B)\mathbf C \tag{1.3.1} $$
+$$ \mathbf A\cdot(\mathbf B\times\mathbf C)=\mathbf B\cdot(\mathbf C\times\mathbf A)=\mathbf C\cdot(\mathbf A\times\mathbf B) \tag{1.3.2} $$
 在矢量分析的表达式中经常出现的是纳布拉算符$\nabla$（定义为$\nabla=\frac{\partial}{\partial x^i}\mathbf e_i$），作为微分算符，$\nabla$和分量为实数的矢量的运算规则不尽相同。下面对于出现$\nabla$的表达式，以$\nabla\times(\mathbf A\times \mathbf B)$为例介绍两种分析的方法：
 1. 式中出现了两个矢量$\mathbf A$和$\mathbf B$，$\nabla$对二者都有作用，那么可以写成$\nabla_{\mathbf A}\times(\mathbf A\times\mathbf B)+\nabla_{\mathbf B}\times(\mathbf A\times\mathbf B)$，其中$\nabla_{\mathbf A}$只对$\mathbf A$作用，$\nabla_{\mathbf B}$只对$\mathbf B$作用。从而由(1.3.1)式，对第一项有：
 $$
@@ -90,21 +86,21 @@ $$
 这里$\nabla_{\mathbf A}$只对$\mathbf A$有作用，因此其与$\mathbf B$的点乘是可以交换的，进行恒等变换使得最后式中$\nabla_{\mathbf A}$只作用在$\mathbf A$上，从而保证在最后化回$\nabla$时不会引起歧义。  
 对$\nabla_{\mathbf B}$的式子同理，最后结果为：
 $$
-\begin{align*}
+\begin{aligned}
 \nabla\times(\mathbf A\times \mathbf B)&=(\mathbf B\cdot\nabla_{\mathbf A})\mathbf A-(\nabla_{\mathbf A}\cdot\mathbf A)\mathbf B + (\nabla_{\mathbf B}\cdot\mathbf B)\mathbf A-(\mathbf A\cdot\nabla_{\mathbf B})\mathbf B
 \\&=(\mathbf B\cdot\nabla)\mathbf A-(\nabla\cdot\mathbf A)\mathbf B + (\nabla\cdot\mathbf B)\mathbf A-(\mathbf A\cdot\nabla)\mathbf B
-\end{align*}
+\end{aligned}
 $$
 2. 使用爱因斯坦求和约定展开：
 $$
-\begin{align*}
+\begin{aligned}
 \nabla\times(\mathbf A\times \mathbf B) &= \epsilon_{ijk}\frac{\partial}{\partial x^j}(\mathbf A\times\mathbf B)_k\mathbf e_i
 \\ &=\epsilon_{ijk}\frac{\partial}{\partial x^j}(\epsilon_{klm}A_lB_m)\mathbf e_i  = \epsilon_{kij}\frac{\partial}{\partial x^j}(\epsilon_{klm}A_lB_m)\mathbf e_i 
 \\&=(\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl})\frac{\partial}{\partial x^j}(A_lB_m)\mathbf e_i
 \\ &=\frac{\partial}{\partial x^j}(A_iB_j)\mathbf e_i-\frac{\partial}{\partial x^j}(A_jB_i)\mathbf e_i
 \\ &=B_j\frac{\partial A_i}{\partial x^j}\mathbf e_i + \frac{\partial B_j}{\partial x^j}A_i\mathbf e_i - \frac{\partial A_j}{\partial x^j}B_i\mathbf e_i - A_j\frac{\partial B_i}{\partial x^j}\mathbf e_i
 \\ &=(\mathbf B\cdot\nabla)\mathbf A + (\nabla\cdot\mathbf B)\mathbf A - (\nabla\cdot\mathbf A)\mathbf B -(\mathbf A\cdot\nabla)\mathbf B
-\end{align*}
+\end{aligned}
 $$
 
 两种方法都得到了正确结果。
