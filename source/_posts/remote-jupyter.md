@@ -20,7 +20,7 @@ source ~/.bashrc
 ```
 添加环境变量。现在就可以使用conda命令了。
 
-接下来需要配置Jupyter，生成并修改配置文件，其方法和[这篇博客](https://li-mz.github.io/2019/10/22/Docker-Jupyter/)的第二节一样（不必用pip安装jupyter，anaconda已经含了）。
+接下来需要配置Jupyter，生成并修改配置文件，其方法和{% post_link Docker-Jupyter %}的第二节一样（不必用pip安装jupyter，anaconda已经含了）。
 
 ## 在本地浏览器访问
 
