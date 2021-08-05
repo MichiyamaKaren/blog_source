@@ -1,7 +1,7 @@
 ---
 title:       使用selenium下载eplus直播存档视频
 description: 
-date:        2021-08-03 15:40:24
+date:        2021-08-05
 mathjax:     false
 categories:
     - 技术
@@ -105,7 +105,7 @@ while True:
 
 ## 后处理
 
-下载完所有ts文件之后，还需要将其拼接成一整个文件。在Windows下，只需进入下载ts文件的目录（即上面代码中的`outdir`），并痣行命令：
+下载完所有ts文件之后，还需要将其拼接成一整个文件。在Windows下，只需进入下载ts文件的目录（即上面代码中的`outdir`），并执行命令：
 
 ```
 copy /b *.ts total.ts
