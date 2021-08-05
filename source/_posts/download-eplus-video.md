@@ -114,7 +114,7 @@ copy /b *.ts total.ts
 再使用ffmpeg转码为mp4：
 
 ```
-ffmpeg -i total.ts -vcodec copy -acodec copy toatl.mp4
+ffmpeg -i total.ts -vcodec copy -acodec copy total.mp4
 ```
 
 即可得到mp4格式的完整视频文件。
