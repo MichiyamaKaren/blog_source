@@ -25,7 +25,7 @@ tags:
 
 首先将twitter2bilibili代码clone到本地：
 ```
-git@github.com:MichiyamaKaren/twitter2bilibili.git
+git clone git@github.com:MichiyamaKaren/twitter2bilibili.git
 ```
 
 进入twitter2bilibili目录，安装依赖的Python库：
@@ -67,4 +67,4 @@ pip install -r requirements.txt
 
 ---
 
-如果你真的按照这篇教程用我的代码成功部署了自己的转推bot，请标注出[项目地址](https://github.com/MichiyamaKaren/twitter2bilibili)。另外也请顺手给我的github仓库点个star，这对我不是很重要，但还是求求你了。
+如果你真的按照这篇教程用我的代码成功部署了自己的转推bot，请标注出[项目地址](https://github.com/MichiyamaKaren/twitter2bilibili)。另外也请顺手给这个仓库点个star，这对我不是很重要，但还是求求你了。
