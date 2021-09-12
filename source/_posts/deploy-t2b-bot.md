@@ -39,7 +39,9 @@ pip install -r requirements.txt
 
 ![config_example.py的截图](config-example.png)
 
-其中以BILI开头的三项为调用B站API所需要的身份认证信息，你可以在bilibili-api的[文档](https://www.moyu.moe/bilibili-api/#/get-credential)中看到如何获取。
+其中以BILI开头的三项为调用B站API所需要的身份认证信息，你可以在[bilibili-api的文档](https://www.moyu.moe/bilibili-api/#/get-credential)中看到如何获取。
+
+**须知**：bilibili-api所要求的这三个key是长期有效，但不是永久有效的。在网页端退出登录后，身份认证将会过期（直接关闭网页则不会），此时如果继续使用旧的key则会出错，会由接口返回错误代码-6。
 
 `TWITTER_BEARER_TOKEN`是推特开发者账号的Bearer Token，在开发者平台上创建应用即可获取。
 
