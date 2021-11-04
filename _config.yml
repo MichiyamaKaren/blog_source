@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Michiyama Karen's Blog
+title: 道山神連的博客
 subtitle: ''
 description: '宇宙的最不可理解之处在于它是可以被理解的'
 keywords:
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://li-mz.github.io
+url: https://michiyamakaren.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -96,7 +96,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:Li-mz/Li-mz.github.io
+  repository: git@github.com:MichiyamaKaren/MichiyamaKaren.github.io.git
   branch: master
 
 # local search
