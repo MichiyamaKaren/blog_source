@@ -221,7 +221,7 @@
                 "File": "exp/trouble1.exp3.json"
             }
         ],
-        "Physics": "model.physics3.json"
+        "Physics": "AijoKaren.physics3.json"
     },
     "HitAreas": [
         {
