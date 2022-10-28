@@ -186,7 +186,7 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  GitHub: https://github.com/Li-mz || github
+  GitHub: https://github.com/MichiyamaKaren || github
   #E-Mail: mailto:yourname@gmail.com || envelope
   Weibo: https://weibo.com/5566902218 || weibo
   #Google: https://plus.google.com/yourname || google
