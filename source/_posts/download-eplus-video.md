@@ -85,7 +85,7 @@ def main():
 
     downloading = 0
     for path in tqdm(ts_paths):
-        if download_ts(path):
+        if download_ts(driver, path):
             downloading += 1
         if downloading == 10:
             sleep(60)
