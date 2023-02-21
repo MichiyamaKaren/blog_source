@@ -1,13 +1,34 @@
-<!-- from: https://www.cnblogs.com/wstong/p/12874732.html -->
+<!-- Pollyfill script -->
+<script src="https://unpkg.com/core-js-bundle@3.6.1/minified.js"></script>
 <!-- Live2DCubismCore script -->
-<script src="https://cdn.jsdelivr.net/gh/wangstong/live2dm3/live2d/js/live2dcubismcore.js"></script>
-<!-- Build script -->
-<script src="https://cdn.jsdelivr.net/gh/wangstong/live2dm3/live2d/js/bundle.js"></script>
-<canvas id="live2d" width="400" height="600" class="live2d" style="position: fixed; opacity: 0.8; left: -70px; bottom: -250px; z-index: 99999; pointer-events: none;"></canvas>
+<script src="https://cdn.jsdelivr.net/gh/MichiyamaKaren/live2dv3-kanban@latest/Demo/static/js/live2dcubismcore.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-ui@1.13.2/dist/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/gh/MichiyamaKaren/live2dv3-kanban@latest/Demo/static/js/canvas2image.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/css/live2d.css" />
+
+<script src="https://cdn.jsdelivr.net/gh/MichiyamaKaren/live2dv3-kanban@latest/dist/l2dkanban.min.js"></script>
 
 <script type="text/javascript">
-    var resourcesPath = '/live2d_models/'; // 指定资源文件（模型）保存的路径
-    var backImageName = ''; // 指定背景图片
-    var modelDir = ['AijoKaren']; // 指定需要加载的模型
-    initDefine(resourcesPath, backImageName, modelDir); // 初始化模型
+    L2Dsettings.configPath = '/live2d_models/config.json';
+    L2Dsettings.resourcesPath = '/live2d_models/';  // 指定资源文件（模型）保存的路径
+    L2Dsettings.backImageName = ''; // 指定背景图片
+    L2Dsettings.modelDirs = 'karen,karen_school'.split(',');
+    L2Dsettings.canvasId = 'live2d';
+
+    L2Dsettings.onModelLoaded = (model) => {
+        model.setExpression("onLoad");
+        model.startMotion("onLoad", 0, 2);
+    };
+
+    window.onload = setupKanban;
 </script>
+
+<div class="live2d-main">
+    <div class="live2d-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="live2d-tool"></div>
+</div>
