@@ -187,8 +187,8 @@ site_state: true
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
   GitHub: https://github.com/MichiyamaKaren || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
-  Weibo: https://weibo.com/5566902218 || weibo
+  E-Mail: mailto:mustarfar@163.com || envelope
+  # Weibo: https://weibo.com/5566902218 || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -197,7 +197,7 @@ social:
   #YouTube: https://youtube.com/yourname || youtube
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
-  Bilibili: https://space.bilibili.com/13024288 || 
+  Bilibili: https://space.bilibili.com/13024288 || fa-brands fa-bilibili
 
 social_icons:
   enable: true
@@ -207,12 +207,12 @@ social_icons:
 # Blog rolls
 links_settings:
   icon: link
-  title: Links
+  title: 友情链接
   # Available values: block | inline
   layout: block
 
 links:
-  #Title: http://example.com
+  FM小林: https://kobayashi-ayi.github.io/
 
 # Table of Contents in the Sidebar
 toc:
@@ -928,7 +928,7 @@ vendors:
   # Example:
   # fontawesome: //cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css
   # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
-  fontawesome:
+  fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css
 
   # MathJax
   # Example:
