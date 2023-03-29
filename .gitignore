@@ -5,3 +5,7 @@ db.json
 node_modules/
 public/
 .deploy*/
+
+# hexo-bilibili-bangumi
+source/_data/bangumis.json
+source/_data/Bangumi-Api-Cache
