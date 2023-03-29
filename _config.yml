@@ -107,13 +107,20 @@ search:
   format: html
   limit: 10000
 
-douban:
-  user: 223108191
-  builtin: false
-  book:
-    title: '我读过的书'
-    quote: ''
-  movie:
-    title: '我看过的电影/动画'
-    quote: ''
-  timeout: 10000
+bangumi: # 追番设置
+  enable: true
+  source: bgm
+  bgmInfoSource: 'bgmApi'
+  path:
+  vmid: 772424
+  title: '追番列表'
+  quote: 'Life is short, I watch anime'
+  show: 1
+  lazyload: true
+  srcValue: '__image__'
+  lazyloadAttrName: 'data-src=__image__'
+  loading:
+  showMyComment: false
+  pagination: false
+  metaColor:
+  color:
