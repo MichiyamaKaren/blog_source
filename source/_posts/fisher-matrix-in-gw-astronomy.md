@@ -44,7 +44,7 @@ $$
 $$ \Gamma_{ij} = \left(\frac{\partial h}{\partial \theta_i},\frac{\partial h}{\partial \theta_j}\right) $$
 定义为**Fisher矩阵**。
 
-从而$L(s|\boldsymbol{\theta}) \propto \exp\left\{-\frac{1}{2} \Gamma_{ij} \Delta\theta_i\Delta\theta_j \right\}$，是协方差矩阵为$\Gamma^{-1}$的正态分布。如果选定先验分布为均匀分布，使用贝叶斯方法估计出的参数的后验分布也就是协方差矩阵为$\Gamma^{-1}$的正态分布。
+从而$L(s|\boldsymbol{\theta}) \propto \exp\left\\{-\frac{1}{2} \Gamma_{ij} \Delta\theta_i\Delta\theta_j \right\\}$，是协方差矩阵为$\Gamma^{-1}$的正态分布。如果选定先验分布为均匀分布，使用贝叶斯方法估计出的参数的后验分布也就是协方差矩阵为$\Gamma^{-1}$的正态分布。
 
 上面的推导给出了估计根据探测器接收到的引力波信号对参数进行限制的能力的方法：计算波形对参数的微分，得到Fisher矩阵，而对齐求逆就得到近似的参数的协方差矩阵。并且我们知道，在真实波形的参数附近，参数的概率分布近似为正态分布。对多个探测器组成的探测器网络，Fisher矩阵为每个探测器的Fisher矩阵的和。
 
@@ -52,7 +52,7 @@ $$ \Gamma_{ij} = \left(\frac{\partial h}{\partial \theta_i},\frac{\partial h}{\p
 
 ## 推导定位天区面积公式
 
-对单个参数，协方差矩阵$C=\Gamma^{-1}$可以简单地给出参数$\theta_i$的误差（标准差）$\sigma_{\theta_i} = \sqrt{C_{ii}}$。
+对单个参数，协方差矩阵$C=\Gamma^{-1}$可以简单地给出参数$\theta\_i$的误差（标准差）$\sigma\_{\theta\_i} = \sqrt{C\_{ii}}$。
 
 一个重要的量是对波源定位的天区的大小，这可以由两个位置参数（如赤经、赤纬）的分布给出。方便起见，我们取参数$x=\cos\theta_0-\cos\theta, y=\phi-\phi_0$，$\theta$和$\phi$是球坐标，$\theta_0$和$\phi_0$是注入波形采取的波源的位置。则立体角就是$\mathrm{d}\Omega=\mathrm{d}x\mathrm{d}y$。由上节，将与位置无关的参数积掉，$x,y$的边缘分布就是均值为零的二维正态分布
 $$ p(x,y) = \frac{1}{2\pi |\det C|^{1/2}} e^{-\frac{1}{2}(C^{-1}_{11}x^2+C^{-1}_{22}y^2+2C^{-1}_{12}xy)} $$
@@ -60,7 +60,7 @@ $$ p(x,y) = \frac{1}{2\pi |\det C|^{1/2}} e^{-\frac{1}{2}(C^{-1}_{11}x^2+C^{-1}_
 
 概率$P$的定位天区面积$\Delta\Omega_P$为根据波源位置的后验分布，波源处在其中的概率为$P$的天区的面积。当然给定面积对应的天区并不唯一，具体地说，这里的区域是误差椭圆，即$xy$平面上等概率密度线内的区域。
 
-通过配方换元，$u^2+v^2=\frac{1}{2}(C^{-1}_{11}x^2+C^{-1}_{22}y^2+2C^{-1}_{12}xy)$，可以求出
+通过配方换元，$u^2+v^2=\frac{1}{2}(C^{-1}\_{11}x^2+C^{-1}\_{22}y^2+2C^{-1}\_{12}xy)$，可以求出
 $$ \left|\frac{\partial(x,y)}{\partial(u,v)}\right| = 2\sqrt{\det C} $$
 
 误差椭圆就是$u^2+v^2\le R^2$，其对应的概率为
