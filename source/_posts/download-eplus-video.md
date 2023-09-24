@@ -31,7 +31,7 @@ Eplus的反爬措施比较严格，每次建立会话时会生成两个key放在
 
 ![](all-ts.png)
 
-## 下载ts文件
+## 下载ts文件并拼接
 
 这一部分比较简单（selenium做了所有复杂的部分），因为eplus回放甚至连登陆都不需要，只需要请求播放url后再挨个get每个ts文件的地址就可以了。不过缺点在于由于eplus不支持同时建立多个连接，因此没法进行多进程下载。另外需要说明的是我下载的时候隔一段时间就会报timeout的错，不知道是网络问题还是反爬虫机制的作用。好在分段传输方式天然地支持了断点续传，因此只需要重启一下就可以了，我们一直以来的努力不会全部木大。
 
@@ -39,10 +39,13 @@ Eplus的反爬措施比较严格，每次建立会话时会生成两个key放在
 
 ``` python
 import os
-from selenium import webdriver
 from time import sleep
-
 from tqdm import tqdm
+
+from selenium import webdriver
+from ffmpy import FFmpeg
+
+from typing import Iterable
 
 
 def parse_m3u8(filename):
@@ -55,66 +58,86 @@ def parse_m3u8(filename):
     return ts_paths
 
 
-outdir = 'ts_video'
-if not os.path.exists(outdir):
-    os.mkdir(outdir)
-
-ts_paths = parse_m3u8('video.m3u8')
-view_url = 'https://live.eplus.jp/ex/player?ib=xxx'    # eplus的视听url
-ts_host_url = 'https://vod.live.eplus.jp/out/v1/xxx/'  # 下载ts文件的url
-
-
-def download_ts(driver:webdriver.Chrome, ts_path):
-    path = os.path.join(outdir, ts_path)
+def download_ts(driver: webdriver.Chrome, ts_path: str, download_dir: str = '.'):
+    path = os.path.join(download_dir, ts_path)
     if os.path.exists(path):
         return False
-    driver.get(ts_host_url+ts_path)
+    driver.get(f'{ts_host_url.rstrip("/")}/{ts_path}')
     return True
 
 
-def main():
+def ep_download_all(download_dir: str):
     options = webdriver.ChromeOptions()
     prefs = {'profile.default_content_settings.popups': 0,
-            'download.default_directory': os.path.abspath(outdir)}  # 将chrome driver的默认下载地址设定为outdir
+            'download.default_directory': os.path.abspath(download_dir)}  # 将chrome driver的默认下载地址设定为download_dir
     options.add_experimental_option('prefs', prefs)
-    options.add_argument('--headless')    # 不显示图形界面
+    # options.add_argument('--headless')    # 不显示图形界面
+    options.add_argument("--disable-web-security")
+    options.add_argument("--disable-site-isolation-trials")
 
     driver = webdriver.Chrome(
         executable_path='chromedriver.exe', chrome_options=options)
     driver.get(view_url)
 
-    downloading = 0
-    for path in tqdm(ts_paths):
-        if download_ts(path):
-            downloading += 1
-        if downloading == 10:
-            sleep(60)
-            downloading = 0
+    counter = 0
+    for path in tqdm(ts_paths, desc='download progress'):
+        if download_ts(driver, path, download_dir):
+            counter += 1
+        if counter == 30:
+            sleep(30)
+            counter = 0
+
+    driver.quit()
+
+
+def merge_binary_files(files: Iterable[str], outfile: str):
+    with open(outfile, 'wb') as outf:
+        for file in tqdm(files, desc='merge progress'):
+            with open(file, 'rb') as f:
+                outf.write(f.read())
+
+
+outdir = 'ts_video'
+if not os.path.exists(outdir):
+    os.mkdir(outdir)
+
+m3u8_path = 'index_4.m3u8'
+out_name = 'total'
+
+ts_paths = parse_m3u8(m3u8_path)
+view_url = 'https://live.eplus.jp/ex/player?ib=xxx'    # eplus的视听url
+ts_host_url = 'https://vod.live.eplus.jp/out/v1/xxx/'  # 下载ts文件的url
 
 
 while True:
     try:
-        main()
+        ep_download_all(outdir)
+        break
     except Exception as e:
         print(f'Exception {e} occured, restarting...')
-        os.system('del *.crdownload')  # 删除chrome临时下载文件
+        for f in filter(lambda s: s.endswith('.crdownload'), os.listdir(outdir)):
+            os.remove(os.path.join(outdir, f))  # 删除chrome临时下载文件
         sleep(100)
-    else:
-        break
+
+print('download complete, start merging...')
+merge_binary_files([os.path.join(outdir, ts) for ts in ts_paths], f'{out_name}.ts')
+
+print('converting merged ts file to mp4...')
+ff = FFmpeg(
+    inputs={f'{out_name}.ts': None},
+    outputs={f'{out_name}.mp4': '-vcodec copy -acodec copy'},
+    global_options='-hide_banner'
+)
+ff.run()
+
+print('convertion complete, clearing ts files...')
+os.remove(f'{out_name}.ts')
+for ts in ts_paths:
+    os.remove(os.path.join(outdir, ts))
+try:
+    os.removedirs(outdir)
+except OSError:
+    pass  # 目录不空，即存在下载的ts文件之外的文件，不删除
 ```
 
-## 后处理
-
-下载完所有ts文件之后，还需要将其拼接成一整个文件。在Windows下，只需进入下载ts文件的目录（即上面代码中的`outdir`），并执行命令：
-
-```
-copy /b *.ts total.ts
-```
-
-再使用ffmpeg转码为mp4：
-
-```
-ffmpeg -i total.ts -vcodec copy -acodec copy total.mp4
-```
-
-即可得到mp4格式的完整视频文件。
+23.9.24更新：这段代码在下载完成全部ts文件后会自动将拼接成整个文件，转码成MP4格式并删除临时文件和目录。
