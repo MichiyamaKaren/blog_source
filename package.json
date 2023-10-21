@@ -28,6 +28,6 @@
     "hexo-renderer-stylus": "^2.0.1",
     "hexo-server": "^2.0.0",
     "hexo-static-math": "^0.1.0",
-    "prismjs": "^1.23.0"
+    "prismjs": "^1.27.0"
   }
 }
